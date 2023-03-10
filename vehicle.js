@@ -89,3 +89,45 @@ class Vehicle {
 module.exports = {
     Vehicle
 }
+
+class Car extends Vehicle {
+    constructor(make, model, year, color, mileage)
+        super(make, model, year, color, mileage)
+        this.maximumPassengers = 5;
+        this.passengers = 0;
+        this. numberOfWheels = 4;
+        this.maximumSpeed = 160;
+        this.fuel = 10;
+        this.scheduleService = false;
+}
+
+checkService(){
+    if(this.mileage > 3000) {
+        this.scheduleService = true
+        return this.scheduleService;
+    }
+}
+
+start(){
+    if(this.fuel > 0)
+    this.fuel = true
+    return this.fuel;
+}
+
+loadPassenger() {
+    if(this.passengers < this.maxPassengers) {
+        if((num + this.passenger) <= this.maxPassengers) {
+            this.passenger = num;
+            return this.passenger;
+        } else {
+            console.log(this.model + " " + this.make + "not enough space");
+        } else console.log(this.model + " " + this.make + "is full")
+    }
+}
+
+let myCar = new Car('Honda'. 'CivicSi', '2020', 'White', 27,000)
+myCar.start(pushToStart)
+myCar.drive(Manual)
+myCar.checkService()
+
+console.log(myCar)
